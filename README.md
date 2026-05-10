@@ -295,8 +295,7 @@ El proyecto propone una solución integral que combina electrónica, programaci�
 
 Su enfoque no solo permite responder a situaciones de riesgo, sino también anticiparse mediante el uso de lógica inteligente y procesamiento de información.
 
-Además, su diseño escalable y su viabilidad técnica y económica lo convierten en una propuesta sólida, con potencial de crecimiento y aplicación en contextos reales.
-
+Además, su diseño escalable y su viabilidad técnica y económica lo convierten en una propuesta sólida, con potencial de crecimiento y aplicación en contextos reales .
 
 
 
