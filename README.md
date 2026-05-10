@@ -1,5 +1,6 @@
 
-# Informe del Proyecto Anual - PDISC 7° 2°
+
+# SafeBike - Informe del Proyecto (PDISC 7° 2°)
 
 **Integrantes:** Thiago Salaberry, Tomás Iezzi, Joaquin Acevedo  
 **Docente:** Maria Paula Balda y York Elias Mansilla Muños  
@@ -7,6 +8,7 @@
 **Fecha:** 07/04/2026
 
 ---
+
 
 ## Índice
 
@@ -45,11 +47,13 @@
 
 ---
 
+
 ## Introducción
 
 En los últimos años, el uso de la bicicleta ha aumentado considerablemente como medio de transporte urbano y actividad recreativa. Este crecimiento se debe a factores como la búsqueda de alternativas económicas, ecológicas y saludables. Sin embargo, este incremento también ha traído consigo una problemática significativa: el aumento de robos de bicicletas y la falta de soluciones tecnológicas accesibles para prevenirlos o actuar de manera efectiva ante estos incidentes.
 
-En este contexto, resulta necesario desarrollar herramientas que integren distintas áreas tecnológicas con el fin de brindar soluciones innovadoras. El presente proyecto propone la creación de un sistema que combine programación, electrónica e inteligencia aplicada para mejorar la seguridad de los ciclistas y ampliar las funcionalidades asociadas al uso de la bicicleta.
+
+En este contexto, resulta necesario desarrollar herramientas que integren distintas áreas tecnológicas con el fin de brindar soluciones innovadoras. SafeBike propone la creación de un sistema que combine programación, electrónica e inteligencia aplicada para mejorar la seguridad de los ciclistas y ampliar las funcionalidades asociadas al uso de la bicicleta.
 
 ## Planteamiento del problema
 
@@ -289,13 +293,15 @@ El sistema ha sido concebido con una arquitectura modular que permite la incorpo
 
 La escalabilidad del sistema asegura su adaptación a futuras necesidades y su crecimiento en complejidad y alcance.
 
+
 ## Conclusión
 
-El proyecto propone una solución integral que combina electrónica, programación y análisis de datos para abordar una problemática actual vinculada a la seguridad de las bicicletas.
+
+SafeBike propone una solución integral que combina electrónica, programación y análisis de datos para abordar una problemática actual vinculada a la seguridad de las bicicletas.
 
 Su enfoque no solo permite responder a situaciones de riesgo, sino también anticiparse mediante el uso de lógica inteligente y procesamiento de información.
 
-Además, su diseño escalable y su viabilidad técnica y económica lo convierten en una propuesta sólida, con potencial de crecimiento y aplicación en contextos reales .
+Además, su diseño escalable y su viabilidad técnica y económica lo convierten en una propuesta sólida, con potencial de crecimiento y aplicación en contextos reales.
 
 
 
