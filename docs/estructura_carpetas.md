@@ -107,5 +107,3 @@ graph TD
   - `frontend/src/pages/Home.jsx`
 
 ---
-
-Si querés, puedo generar los archivos base (`server.js`, `package.json`, `tailwind.config.js`, etc.) para arrancar el proyecto. ¿Deseas que los cree ahora?
