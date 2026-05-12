@@ -103,12 +103,5 @@ graph TD
 
 - Frontend mínimo:
   - `frontend/public/index.html`
-<<<<<<< HEAD
   - `frontend/src/main.js` (entry)
   - `frontend/src/pages/Home.js`
-=======
-  - `frontend/src/main.jsx` (entry)
-  - `frontend/src/pages/Home.jsx`
-
----
->>>>>>> 0cdf02a65fc339da82ddb56381f891f86c1579d6
