@@ -20,9 +20,9 @@ SafeBike/
 │   │   └── favicon.ico
 │   └── src/
 │       ├── components/
-│       │   └── Header.jsx
+│       │   └── Header.js
 │       ├── pages/
-│       │   └── Home.jsx
+│       │   └── Home.js
 │       └── styles/
 │           └── tailwind.css
 ├── logic/
@@ -68,9 +68,9 @@ graph TD
 
 - `frontend/` — Interfaz de usuario (SPA o páginas estáticas)
   - `public/`: Archivos estáticos (ej.: `index.html`, `favicon.ico`, imágenes y assets).
-  - `src/`: Código fuente (React/Vue/Svelte u otra stack).
-    - `components/`: Componentes reutilizables (ej.: `Header.jsx`, `Button.jsx`).
-    - `pages/`: Vistas completas (ej.: `Home.jsx`, `Login.jsx`, `Dashboard.jsx`).
+    - `src/`: Código fuente (JavaScript, HTML y CSS).
+      - `components/`: Componentes reutilizables (ej.: `Header.js`, `Button.js`).
+      - `pages/`: Vistas completas (ej.: `Home.js`, `Login.js`, `Dashboard.js`).
     - `styles/`: Archivos de Tailwind o CSS global (`tailwind.css`, `globals.css`).
 
 - `logic/` — Lógica de negocio compartida
@@ -84,7 +84,7 @@ graph TD
   - Archivos raíz típicos: `app.js`/`server.js`, `package.json`, `.env.example`.
 
 - `docs/` — Documentación y recursos del proyecto
-  - Informes (PDF), diagramas, actas de campo y documentación de diseño (`INFORME DEL PROYECTO.pdf`, este archivo).
+  - Informes (PDF), diagramas, actas de campo y documentación de diseño.
 
 - Archivos raíz importantes
   - `README.md`: Resumen y guía del proyecto.
@@ -99,13 +99,9 @@ graph TD
   - `backend/server.js` (arranque de Express)
   - `backend/routes/index.js`
   - `backend/controllers/health.controller.js`
-  - `backend/models/` (si usarás una BD)
+  - `backend/models/`
 
 - Frontend mínimo:
   - `frontend/public/index.html`
-  - `frontend/src/main.jsx` (entry)
-  - `frontend/src/pages/Home.jsx`
-
----
-
-Si querés, puedo generar los archivos base (`server.js`, `package.json`, `tailwind.config.js`, etc.) para arrancar el proyecto. ¿Deseas que los cree ahora?
+  - `frontend/src/main.js` (entry)
+  - `frontend/src/pages/Home.js`
