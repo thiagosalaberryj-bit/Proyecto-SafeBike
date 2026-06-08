@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+
+@theme{
+  /* Modo oscuro */
+  --color-dark-main-bg: #0F172A;
+  --color-dark-sec-bg: #1E293B;
+  --color-dark-placeholder: #A9A9A9;
+  --color-dark-text: #FFFFFF;
+  --color-dark-border: #393A3A;
+
+  /* Modo claro */
+  --color-light-main-bg: #E6E6E6;
+  --color-light-sec-bg: #F3F3F3;
+  --color-light-placeholder: #606060;
+  --color-light-text: #000000;
+  --color-light-border: #A5A5A5;
+
+  /* Color principal */
+  --color-primary: #EA671A;
+}

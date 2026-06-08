@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/styles/output.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>SafeBike</title>
+</head>
+
+<body class="bg-dark-main-bg">
+    <header class="fixed w-full top-0 left-0 z-50">
+        <nav class="backdrop-blur-sm bg-slate-900/80 mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <img src="../public/favicon.svg" alt="SafeBike Icono" class="h-10 w-auto" />
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" command="show-modal" commandfor="mobile-menu"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <a href="#inicio" data-target="inicio" class="text-sm/6 font-semibold text-white">Inicio</a>
+                <a href="#sistema" data-target="sistema" class="text-sm/6 font-semibold text-white">Sistema</a>
+                <a href="#funciones" data-target="funciones" class="text-sm/6 font-semibold text-white">Funciones</a>
+                <a href="#tecnologias" data-target="tecnologias"
+                    class="text-sm/6 font-semibold text-white">Tecnologías</a>
+                <a href="#contacto" data-target="contacto" class="text-sm/6 font-semibold text-white">Contacto</a>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="#app" data-target="app"
+                    class="text-sm/6 font-semibold text-white bg-primary rounded-lg px-3 py-2">App</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24">
+        <section id="inicio" class="relative min-h-screen overflow-hidden">
+            <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-4">
+                <div class="grid lg:grid-cols-2 items-center gap-16">
+                    <div class="text-center lg:text-left">
+                        <div
+                            class="inline-flex items-center gap-4 rounded-full border border-slate-700 bg-slate-800/50 px-5 py-3 mb-8 text-sm">
+                            <span class="text-primary font-semibold">
+                                SEGURIDAD INTELIGENTE PARA TU BICICLETA
+                            </span>
+                        </div>
+                        <h1 class="text-white font-bold text-4xl sm:text-6xl lg:text-7xl">
+                            Protegé tu bicicleta <span class="text-primary">en tiempo real.</span>
+                        </h1>
+                        <p class="mt-8 text-gray-400 text-lg lg:text-lg max-w-xl mx-auto lg:mx-0">
+                            Descubre cómo nuestra tecnología de seguridad puede proteger tu bicicleta en todo momento.
+                        </p>
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <button
+                                class="bg-primary hover:bg-primary/80 transition text-white font-semibold px-8 py-4 rounded-xl cursor-pointer ">
+                                Ver Demo
+                            </button>
+
+                            <button class="text-white font-semibold px-8 py-4 border-2 border-white rounded-xl">
+                                Conocer el Sistema
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="w-full max-w-lg lg:max-w-md">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/019/859/717/small/realistic-models-smartphone-with-transparent-screens-smartphone-mockup-collection-device-front-view-3d-mobile-phone-with-shadow-transparent-background-illustration-png.png"
+                                alt="App" class="w-full object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sistema" class="min-h-screen flex items-center justify-center bg-slate-900 text-white">
+            <div class="max-w-4xl px-6 py-24 text-center">
+                <h2 class="text-4xl font-bold mb-4">Sistema</h2>
+                <p class="text-gray-400">Descripción del sistema (contenido de ejemplo).</p>
+            </div>
+        </section>
+
+        <section id="funciones" class="min-h-screen flex items-center justify-center bg-slate-800 text-white">
+            <div class="max-w-4xl px-6 py-24 text-center">
+                <h2 class="text-4xl font-bold mb-4">Funciones</h2>
+                <p class="text-gray-400">Listado de funciones (contenido de ejemplo).</p>
+            </div>
+        </section>
+
+        <section id="tecnologias" class="min-h-screen flex items-center justify-center bg-slate-900 text-white">
+            <div class="max-w-4xl px-6 py-24 text-center">
+                <h2 class="text-4xl font-bold mb-4">Tecnologías</h2>
+                <p class="text-gray-400">Tecnologías usadas (contenido de ejemplo).</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="min-h-screen flex items-center justify-center bg-slate-800 text-white">
+            <div class="max-w-4xl px-6 py-24 text-center">
+                <h2 class="text-4xl font-bold mb-4">Contacto</h2>
+                <p class="text-gray-400">Información de contacto (contenido de ejemplo).</p>
+            </div>
+        </section>
+
+        <section id="app" class="min-h-screen flex items-center justify-center bg-slate-800 text-white">
+            <div class="max-w-4xl px-6 py-24 text-center">
+                <h2 class="text-4xl font-bold mb-4">App</h2>
+                <p class="text-gray-400">App.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-4 md:p-8 lg:p-10 bg-dark-sec-bg border-t-2 border-primary">
+        <div class="mx-auto max-w-xl text-center">
+            <a href="#" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+                SafeBike
+            </a>
+            <p class="my-6 text-gray-500 dark:text-gray-400">Protegé tu bicicleta <span class="text-primary">en tiempo real.</span></p>
+            <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Inicio</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Sistema</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Funciones</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Tecnologías</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Contacto</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">App</a>
+                </li>
+            </ul>
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2026 -  <a href="#"
+                    class="hover:underline">SafeBike</a>.</span>
+        </div>
+    </footer>
+
+</body>
+
+<script src="../src/components/Header.js"></script>
+
+</html>
