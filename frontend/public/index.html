@@ -11,15 +11,15 @@
 
 <body class="bg-dark-main-bg">
     <header class="fixed w-full top-0 left-0 z-50">
-        <nav class="backdrop-blur-sm bg-slate-900/80 mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <img src="../public/favicon.svg" alt="SafeBike Icono" class="h-10 w-auto" />
                 </a>
             </div>
             <div class="flex lg:hidden">
-                <button type="button" command="show-modal" commandfor="mobile-menu"
-                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+                <button id="mob-open" type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400 hover:text-white">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
                         aria-hidden="true" class="size-6">
                         <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
@@ -42,36 +42,58 @@
         </nav>
     </header>
 
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 z-50 flex-col items-center justify-center gap-9 bg-[rgba(7,8,10,.97)] backdrop-blur-[20px] px-6 text-center">
+        <button id="mob-close" type="button" class="absolute right-6 top-6 text-gray-400 hover:text-white">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-7 w-7">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="#inicio" class="text-[1.5rem] font-bold text-white/70 hover:text-white transition-colors">Inicio</a>
+        <a href="#sistema" class="text-[1.5rem] font-bold text-white/70 hover:text-white transition-colors">Sistema</a>
+        <a href="#funciones"
+            class="text-[1.5rem] font-bold text-white/70 hover:text-white transition-colors">Funciones</a>
+        <a href="#tecnologias"
+            class="text-[1.5rem] font-bold text-white/70 hover:text-white transition-colors">Tecnologías</a>
+        <a href="#contacto"
+            class="text-[1.5rem] font-bold text-white/70 hover:text-white transition-colors">Contacto</a>
+        <a href="#app" class="text-[1.5rem] font-bold text-primary transition-colors">App</a>
+    </div>
+
+
     <main class="pt-24">
-        <section id="inicio" class="relative min-h-screen overflow-hidden">
-            <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-4">
+        <section id="inicio" class="relative min-h-screen overflow-hidden ">
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-4">
                 <div class="grid lg:grid-cols-2 items-center gap-16">
                     <div class="text-center lg:text-left">
                         <div
-                            class="inline-flex items-center gap-4 rounded-full border border-slate-700 bg-slate-800/50 px-5 py-3 mb-8 text-sm">
+                            class="inline-flex items-center gap-4 rounded-full border border-slate-700 bg-slate-800/50 px-5 py-3 mb-8 text-sm animate-blurred-fade-in">
                             <span class="text-primary font-semibold">
                                 SEGURIDAD INTELIGENTE PARA TU BICICLETA
                             </span>
                         </div>
-                        <h1 class="text-white font-bold text-4xl sm:text-6xl lg:text-7xl">
+                        <h1 class="text-white font-bold text-4xl sm:text-6xl lg:text-7xl animate-blurred-fade-in">
                             Protegé tu bicicleta <span class="text-primary">en tiempo real.</span>
                         </h1>
-                        <p class="mt-8 text-gray-400 text-lg lg:text-lg max-w-xl mx-auto lg:mx-0">
+                        <p
+                            class="mt-8 text-gray-400 text-lg lg:text-lg max-w-xl mx-auto lg:mx-0 animate-blurred-fade-in">
                             Descubre cómo nuestra tecnología de seguridad puede proteger tu bicicleta en todo momento.
                         </p>
-                        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <div
+                            class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-blurred-fade-in">
                             <button
                                 class="bg-primary hover:bg-primary/80 transition text-white font-semibold px-8 py-4 rounded-xl cursor-pointer ">
                                 Ver Demo
                             </button>
 
-                            <button class="text-white font-semibold px-8 py-4 border-2 border-white rounded-xl">
+                            <button
+                                class="text-white font-semibold px-8 py-4 border-2 border-white rounded-xl animate-blurred-fade-in">
                                 Conocer el Sistema
                             </button>
                         </div>
                     </div>
 
-                    <div class="flex justify-center lg:justify-end">
+                    <div class="flex justify-center lg:justify-end animate-slide-in-top">
                         <div class="w-full max-w-lg lg:max-w-md">
                             <img src="https://static.vecteezy.com/system/resources/thumbnails/019/859/717/small/realistic-models-smartphone-with-transparent-screens-smartphone-mockup-collection-device-front-view-3d-mobile-phone-with-shadow-transparent-background-illustration-png.png"
                                 alt="App" class="w-full object-contain">
@@ -81,31 +103,288 @@
             </div>
         </section>
 
-        <section id="sistema" class="min-h-screen flex items-center justify-center bg-slate-900 text-white">
-            <div class="max-w-4xl px-6 py-24 text-center">
-                <h2 class="text-4xl font-bold mb-4">Sistema</h2>
-                <p class="text-gray-400">Descripción del sistema (contenido de ejemplo).</p>
+        <div class="overflow-hidden border-y border-white/5 bg-primary/5 py-3.5">
+            <div class="banner flex gap-0 w-max">
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-white/25 border-r border-white/8">Detección
+                    inteligente</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-primary border-r border-white/8">SafeBike</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-white/25 border-r border-white/8">Alertas
+                    en tiempo real</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-white/25 border-r border-white/8">Mapa
+                    de riesgo</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-primary border-r border-white/8">Protección
+                    24/7</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-white/25 border-r border-white/8">Hardware
+                    + App + IA</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-white/25 border-r border-white/8">Sin
+                    falsas alarmas</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-primary border-r border-white/8">SafeBike</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-white/25 border-r border-white/8">Detección
+                    inteligente</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-white/25 border-r border-white/8">Alertas
+                    en tiempo real</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-white/25 border-r border-white/8">Mapa
+                    de riesgo</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-primary border-r border-white/8">Protección
+                    24/7</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-white/25 border-r border-white/8">Hardware
+                    + App + IA</span>
+                <span
+                    class="px-10 text-xs font-bold tracking-widest uppercase text-white/25 border-r border-white/8">Sin
+                    falsas alarmas</span>
+            </div>
+        </div>
+
+        <section id="sistema" class="py-16 sm:py-24 lg:py-32 border-t border-white/10">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-12 sm:mb-16">
+                    <p
+                        class="text-lg sm:text-2xl lg:text-3xl font-bold leading-relaxed text-white timeline-view animate-zoom-in animate-range-cover">
+                        SafeBike es el primer sistema que une un dispositivo físico, inteligencia artificial y una app
+                        para proteger tu bicicleta en tiempo real.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                        <div class="text-2xl sm:text-3xl font-bold text-primary mb-2">80%</div>
+                        <p class="text-[11px] sm:text-sm font-semibold uppercase tracking-wide text-white/70">Robos
+                            prevenidos</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                        <div class="text-2xl sm:text-3xl text-white font-bold mb-2">3</div>
+                        <p class="text-[11px] sm:text-sm font-semibold uppercase tracking-wide text-white/70">Capas del
+                            sistema</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                        <div class="text-2xl sm:text-3xl font-bold text-primary mb-2">24/7</div>
+                        <p class="text-[11px] sm:text-sm font-semibold uppercase tracking-wide text-white/70">Monitoreo
+                            activo</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+                        <div class="text-2xl sm:text-3xl text-white font-bold mb-2">0</div>
+                        <p class="text-[11px] sm:text-sm font-semibold uppercase tracking-wide text-white/70">Falsas alarmas
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="funciones" class="min-h-screen flex items-center justify-center bg-slate-800 text-white">
-            <div class="max-w-4xl px-6 py-24 text-center">
-                <h2 class="text-4xl font-bold mb-4">Funciones</h2>
-                <p class="text-gray-400">Listado de funciones (contenido de ejemplo).</p>
+        <section id="funciones" class="border-t border-white/10 py-16 sm:py-24 lg:py-32">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="mb-12 sm:mb-16">
+                    <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-primary mb-3">Funciones</div>
+                    <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">Las 3
+                        capas<br /><span class="text-white/30">de SafeBike</span></h2>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-16 sm:mb-24 lg:mb-32 timeline-view animate-blurred-fade-in animate-range-[entry_10%_contain_30%]">
+                    <div class="flex flex-col justify-center order-2 lg:order-1">
+                        <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-primary mb-3">Capa 1
+                        </div>
+                        <h3 class="text-xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">Dispositivo físico</h3>
+                        <p class="text-sm sm:text-base text-white/50 leading-relaxed mb-6">
+                            Microcontrolador autónomo instalado en tu bici. Sensores IMU detectan movimiento sospechoso.
+                            Funciona 24/7 sin recarga constante.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-xs font-semibold px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary">Sensores
+                                IMU</span>
+                            <span
+                                class="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/70">Bajo
+                                consumo</span>
+                            <span
+                                class="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/70">Autónomo</span>
+                        </div>
+                    </div>
+                    <div
+                        class="order-1 lg:order-2 bg-white/5 border border-white/10 rounded-2xl p-8 sm:p-12 aspect-square flex items-center justify-center">
+                        <div
+                            class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl border border-primary/30 bg-primary/10 flex items-center justify-center">
+                            <svg viewBox="0 0 24 24"
+                                class="w-10 h-10 sm:w-12 sm:h-12 stroke-primary fill-none stroke-2">
+                                <path d="M9 12l2 2 4-4m7-6a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-16 sm:mb-24 lg:mb-32 timeline-view animate-blurred-fade-in animate-range-[entry_10%_contain_30%]">
+                    <div
+                        class="bg-white/5 border border-white/10 rounded-2xl p-8 sm:p-12 aspect-square flex items-center justify-center">
+                        <div
+                            class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl border border-primary/30 bg-primary/10 flex items-center justify-center">
+                            <svg viewBox="0 0 24 24"
+                                class="w-10 h-10 sm:w-12 sm:h-12 stroke-primary fill-none stroke-2">
+                                <path
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-primary mb-3">Capa 2
+                        </div>
+                        <h3 class="text-xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">Servidor & IA</h3>
+                        <p class="text-sm sm:text-base text-white/50 leading-relaxed mb-6">
+                            Backend inteligente que procesa eventos en tiempo real. IA clasifica riesgo, construye mapas
+                            de
+                            calor y almacena historial en nube.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-xs font-semibold px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary">Procesamiento
+                                IA</span>
+                            <span
+                                class="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/70">Datos
+                                tiempo real</span>
+                            <span
+                                class="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/70">API
+                                REST</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 timeline-view animate-blurred-fade-in animate-range-[entry_10%_contain_30%]">
+                    <div class="flex flex-col justify-center order-2 lg:order-1">
+                        <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-primary mb-3">Capa 3
+                        </div>
+                        <h3 class="text-xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">App móvil</h3>
+                        <p class="text-sm sm:text-base text-white/50 leading-relaxed mb-6">
+                            Control total desde tu bolsillo. Alertas clasificadas, historial completo, mapa de zonas
+                            seguras
+                            y estadísticas de rutas.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-xs font-semibold px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary">Alertas
+                                push</span>
+                            <span
+                                class="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/70">Historial</span>
+                            <span
+                                class="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/70">Estadísticas</span>
+                        </div>
+                    </div>
+                    <div
+                        class="order-1 lg:order-2 bg-white/5 border border-white/10 rounded-2xl p-8 sm:p-12 aspect-square flex items-center justify-center">
+                        <div
+                            class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl border border-primary/30 bg-primary/10 flex items-center justify-center">
+                            <svg viewBox="0 0 24 24"
+                                class="w-10 h-10 sm:w-12 sm:h-12 stroke-primary fill-none stroke-2">
+                                <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="tecnologias" class="min-h-screen flex items-center justify-center bg-slate-900 text-white">
-            <div class="max-w-4xl px-6 py-24 text-center">
-                <h2 class="text-4xl font-bold mb-4">Tecnologías</h2>
-                <p class="text-gray-400">Tecnologías usadas (contenido de ejemplo).</p>
+        <section id="arquitectura" class="border-t border-white/10 py-16 sm:py-24 lg:py-32">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="mb-12 sm:mb-16">
+                    <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-primary mb-3">Arquitectura
+                    </div>
+                    <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">Cómo
+                        funciona<br /><span class="text-white/30">todo junto</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 timeline-view animate-blurred-fade-in animate-range-[entry_10%_contain_30%]
+]">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 sm:p-8">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                            <svg viewBox="0 0 24 24" class="h-6 w-6 stroke-primary fill-none stroke-2">
+                                <path d="M12 6v12M6 12h12" />
+                            </svg>
+                        </div>
+                        <div class="text-3xl font-black text-white/40 mb-4">01</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Detección</h3>
+                        <p class="text-sm text-white/50">El dispositivo detecta movimiento sospechoso con sensores
+                            inteligentes.</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 sm:p-8">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                            <svg viewBox="0 0 24 24" class="h-6 w-6 stroke-primary fill-none stroke-2">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                            </svg>
+                        </div>
+                        <div class="text-3xl font-black text-white/40 mb-4">02</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Procesamiento</h3>
+                        <p class="text-sm text-white/50">La IA analiza y clasifica el nivel de riesgo en tiempo real.
+                        </p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 sm:p-8">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                            <svg viewBox="0 0 24 24" class="h-6 w-6 stroke-primary fill-none stroke-2">
+                                <path
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </div>
+                        <div class="text-3xl font-black text-white/40 mb-4">03</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-3">Notificación</h3>
+                        <p class="text-sm text-white/50">Recibís alertas instantáneas clasificadas por severidad.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contacto" class="min-h-screen flex items-center justify-center bg-slate-800 text-white">
-            <div class="max-w-4xl px-6 py-24 text-center">
-                <h2 class="text-4xl font-bold mb-4">Contacto</h2>
-                <p class="text-gray-400">Información de contacto (contenido de ejemplo).</p>
+        <section id="contacto" class="border-t border-white/10 py-16 sm:py-24 lg:py-32">
+            <div class="max-w-2xl mx-auto px-6">
+                <div class="mb-12 sm:mb-16 text-center">
+                    <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-primary mb-3">Contacto</div>
+                    <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">¿Querés saber
+                        más?</h2>
+                    <p class="text-sm sm:text-base text-white/50">Completá el formulario y nos pondremos en contacto.
+                    </p>
+                </div>
+                <form id="contactForm" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <label class="flex flex-col gap-2">
+                            <span class="text-xs font-bold uppercase tracking-wide text-white/40">Nombre</span>
+                            <input type="text" placeholder="Tu nombre" required
+                                class="rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-sm text-white outline-none transition focus:border-primary/50 focus:bg-white/10" />
+                        </label>
+                        <label class="flex flex-col gap-2">
+                            <span class="text-xs font-bold uppercase tracking-wide text-white/40">Email</span>
+                            <input type="email" placeholder="tu@email.com" required
+                                class="rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-sm text-white outline-none transition focus:border-primary/50 focus:bg-white/10" />
+                        </label>
+                    </div>
+                    <label class="flex flex-col gap-2">
+                        <span class="text-xs font-bold uppercase tracking-wide text-white/40">Asunto</span>
+                        <input type="text" placeholder="¿En qué te podemos ayudar?"
+                            class="rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-sm text-white outline-none transition focus:border-primary/50 focus:bg-white/10" />
+                    </label>
+                    <label class="flex flex-col gap-2">
+                        <span class="text-xs font-bold uppercase tracking-wide text-white/40">Mensaje</span>
+                        <textarea rows="5" placeholder="Contanos tu consulta..." required
+                            class="rounded-lg bg-white/5 border border-white/10 px-4 py-3 text-sm text-white outline-none transition focus:border-primary/50 focus:bg-white/10 resize-vertical"></textarea>
+                    </label>
+                    <div class="flex flex-col sm:flex-row gap-4 sm:items-center pt-2">
+                        <button type="submit"
+                            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-semibold text-white transition hover:opacity-90">
+                            Enviar
+                            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </button>
+                        <span id="formMsg" class="hidden text-sm text-white/60">✓ Mensaje enviado</span>
+                    </div>
+                </form>
             </div>
         </section>
 
@@ -117,34 +396,15 @@
         </section>
     </main>
 
-    <footer class="p-4 md:p-8 lg:p-10 bg-dark-sec-bg border-t-2 border-primary">
-        <div class="mx-auto max-w-xl text-center">
-            <a href="#" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+    <footer class="border-t border-white/10 px-6 py-10 sm:py-12">
+        <div
+            class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div class="flex items-center gap-2 text-sm font-semibold text-white/60">
+                <img src="../public/favicon.svg" alt="SafeBike" class="h-6 w-6" />
                 SafeBike
-            </a>
-            <p class="my-6 text-gray-500 dark:text-gray-400">Protegé tu bicicleta <span class="text-primary">en tiempo real.</span></p>
-            <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
-                <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Inicio</a>
-                </li>
-                <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6">Sistema</a>
-                </li>
-                <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Funciones</a>
-                </li>
-                <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6">Tecnologías</a>
-                </li>
-                <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6">Contacto</a>
-                </li>
-                <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6">App</a>
-                </li>
-            </ul>
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2026 -  <a href="#"
-                    class="hover:underline">SafeBike</a>.</span>
+            </div>
+            <div class="text-xs sm:text-sm text-white/40">© 2026 SafeBike — Protección inteligente para tu bicicleta
+            </div>
         </div>
     </footer>
 

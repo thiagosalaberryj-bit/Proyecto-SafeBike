@@ -1,4 +1,5 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'tailwind-animations';
 
 
 @theme{
@@ -18,4 +19,26 @@
 
   /* Color principal */
   --color-primary: #EA671A;
+}
+
+.banner {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  will-change: transform;
+  animation: banner 18s linear infinite;
+}
+
+.banner > * {
+  flex-shrink: 0;
+}
+
+/* Pausa al pasar el ratón */
+.banner:hover {
+  animation-play-state: paused;
+}
+
+@keyframes banner {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }

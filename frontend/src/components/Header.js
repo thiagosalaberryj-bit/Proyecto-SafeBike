@@ -1,43 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('nav a[data-target]');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobOpen = document.getElementById('mob-open');
+const mobClose = document.getElementById('mob-close');
 
-    navLinks.forEach(a => {
-        // prepare underline span
-        const underline = document.createElement('span');
-        underline.className = 'underline absolute left-0 -bottom-2 h-0.5 bg-primary w-0 transition-all duration-300';
-        a.classList.add('relative', 'px-1');
-        a.appendChild(underline);
+const openMobileMenu = () => {
+  if (!mobileMenu) return;
+  mobileMenu.classList.remove('hidden');
+  mobileMenu.classList.add('flex');
+};
 
-        a.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = a.dataset.target;
-            const el = document.getElementById(targetId);
-            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            setActive(targetId);
-        });
-    });
+const closeMobileMenu = () => {
+  if (!mobileMenu) return;
+  mobileMenu.classList.remove('flex');
+  mobileMenu.classList.add('hidden');
+};
 
-    function setActive(id) {
-        navLinks.forEach(a => {
-            const u = a.querySelector('.underline');
-            if (!u) return;
-            if (a.dataset.target === id) {
-                u.classList.remove('w-0');
-                u.classList.add('w-full');
-            } else {
-                u.classList.remove('w-full');
-                u.classList.add('w-0');
-            }
-        });
-    }
+mobOpen?.addEventListener('click', openMobileMenu);
+mobClose?.addEventListener('click', closeMobileMenu);
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                setActive(entry.target.id);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+mobileMenu?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', closeMobileMenu);
 });
+
+
