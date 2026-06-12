@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/styles/output.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
     <title>SafeBike</title>
 </head>
-
-<body class="bg-dark-main-bg">
+  
+<body class="bg-dark-main-bg scroll-smooth">
     <header class="fixed w-full top-0 left-0 z-50">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
-                    <img src="../public/favicon.svg" alt="SafeBike Icono" class="h-10 w-auto" />
+                    <img src="../public/logo.svg" alt="SafeBike Icono" class="h-10 w-auto" />
                 </a>
             </div>
             <div class="flex lg:hidden">
@@ -175,7 +175,8 @@
                     </div>
                     <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
                         <div class="text-2xl sm:text-3xl text-white font-bold mb-2">0</div>
-                        <p class="text-[11px] sm:text-sm font-semibold uppercase tracking-wide text-white/70">Falsas alarmas
+                        <p class="text-[11px] sm:text-sm font-semibold uppercase tracking-wide text-white/70">Falsas
+                            alarmas
                         </p>
                     </div>
                 </div>
@@ -388,11 +389,35 @@
             </div>
         </section>
 
-        <section id="app" class="min-h-screen flex items-center justify-center bg-slate-800 text-white">
-            <div class="max-w-4xl px-6 py-24 text-center">
-                <h2 class="text-4xl font-bold mb-4">App</h2>
-                <p class="text-gray-400">App.</p>
-            </div>
+        <section id="app" class="min-h-screen flex items-center justify-center text-white border-t border-white/10">
+            <div class="w-full px-6">
+                <div class="max-w-6xl mx-auto text-center">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="text-center lg:text-left">
+                            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6">Conocé nuestra nueva
+                                app</h2>
+                            <p class="text-sm sm:text-base md:text-md text-prymary mb-8 leading-relaxed">
+                                Descarga nuestra aplicación móvil para agendar citas, recibir recordatorios de
+                                vacunación,
+                                consultar el historial médico de tu mascota y mucho más.
+                            </p>
+                            <div class="flex space-x-4 justify-center lg:justify-start">
+                                <a href="" download
+                                    class="bg-primary text-white px-8 py-4 rounded-2xl font-semibold hover:bg-primary/70 transition-colors duration-300 shadow-xl">
+                                    Descargar
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end md:justify-end">
+                            <div
+                                class="relative h-96 w-80 max-2xl:mr-24 max-xl:mr-24 max-lg:ml-20 max-lg:mt-4 max-sm:ml-24">
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/019/859/717/small/realistic-models-smartphone-with-transparent-screens-smartphone-mockup-collection-device-front-view-3d-mobile-phone-with-shadow-transparent-background-illustration-png.png" alt="App mockup"
+                                    class="-mt-12 h-full w-full object-contain drop-shadow-xl" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
     </main>
 
@@ -400,7 +425,7 @@
         <div
             class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
             <div class="flex items-center gap-2 text-sm font-semibold text-white/60">
-                <img src="../public/favicon.svg" alt="SafeBike" class="h-6 w-6" />
+                <img src="../public/logo.svg" alt="SafeBike" class="h-6 w-6" />
                 SafeBike
             </div>
             <div class="text-xs sm:text-sm text-white/40">© 2026 SafeBike — Protección inteligente para tu bicicleta
